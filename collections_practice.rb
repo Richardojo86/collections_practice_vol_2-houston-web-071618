@@ -25,9 +25,15 @@ def remove_non_strings(array)
 end 
 
 def count_elements(array)
-freq = Hash.new(0)
-array.each { |x| freq[x] += 1 }
-freq.each{ |key, value| }
+  new_hash = {}
+  array.each do |b|
+    new_hash[b[:name]] = if new_hash[b[:name]]
+      new_hash[b[:name]] + 1
+    else
+      1
+    end
+  end
+  new_hash.map { |k, v| { name: k, count: v } }
 end
 
 def merge_data(keys, data)
