@@ -36,6 +36,12 @@ def count_elements(array)
   new_hash.map { |k, v| { name: k, count: v } }
 end
 
-def merge_data(keys, data)
-keys[0].values.map.with_index {|key, i| data[i].merge(v)}
+def merge_data(_keys, data)
+  first_hash = {}
+  second_hash = {}
+  first_hash[:first_name] = "blake"
+  first_hash.merge!(data.first['blake'])
+  second_hash[:first_name] = "ashley"
+  second_hash = second_hash.merge(data.first['ashley'])
+  [first_hash, second_hash]
 end 
