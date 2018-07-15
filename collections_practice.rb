@@ -51,4 +51,8 @@ def organize_schools(schools)
    "SF"=>["dev boot camp", "Hack Reactor"],
    "Chicago"=>["dev boot camp chicago"]}
 end
+
+
+
+
 end
