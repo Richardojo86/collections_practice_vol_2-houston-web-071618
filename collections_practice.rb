@@ -1,28 +1,28 @@
- def begins_with_r(array)
-array.all? {|word| word[0].include? ("r")
-}
+def begins_with_r(array)
+  array.all? {|word| word[0].include? ("r")
+  }
 end
 
 def contain_a(array)
   new_arr = []
-  array.collect{|word| if word.include?("a") 
-  new_arr << word 
-end 
-}
-new_arr
-end 
- 
+  array.collect{|word| if word.include?("a")
+    new_arr << word
+  end
+  }
+  new_arr
+end
+
 def first_wa(array)
-new_arr = []
+  new_arr = []
   array.each{|w| new_arr << w.to_s}
   new_arr.any?{|word| if word.start_with?('wa')
-  return word
-end }
-end 
+    return word
+  end }
+end
 
 def remove_non_strings(array)
   array.delete_if { |obj| !(obj.is_a? String) }
-end 
+end
 
 def count_elements(array)
   new_hash = {}
@@ -50,9 +50,4 @@ def organize_schools(schools)
   {"NYC"=>["flatiron school bk", "flatiron school", "general assembly"],
    "SF"=>["dev boot camp", "Hack Reactor"],
    "Chicago"=>["dev boot camp chicago"]}
-end
-
-
-
-
 end
