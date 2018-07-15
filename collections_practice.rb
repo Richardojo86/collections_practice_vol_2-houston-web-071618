@@ -44,4 +44,10 @@ def merge_data(_keys, data)
   second_hash[:first_name] = "ashley"
   second_hash = second_hash.merge(data.first['ashley'])
   [first_hash, second_hash]
-end 
+end
+
+def find_cool(cool)
+  cool.each do |key|
+    return [key] if key[:temperature] == "cool"
+  end
+end
