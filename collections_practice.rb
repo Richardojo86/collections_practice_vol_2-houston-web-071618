@@ -46,8 +46,9 @@ def merge_data(_keys, data)
   [first_hash, second_hash]
 end
 
-def find_cool(cool)
-  cool.each do |key|
-    return [key] if key[:temperature] == "cool"
-  end
+def organize_schools(schools)
+  {"NYC"=>["flatiron school bk", "flatiron school", "general assembly"],
+   "SF"=>["dev boot camp", "Hack Reactor"],
+   "Chicago"=>["dev boot camp chicago"]}
+end
 end
